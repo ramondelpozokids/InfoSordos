@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0a3bf6">
+    <meta name="description" content="Aprende Lengua de Signos Española (LSE) con InfoSordos. Vídeos accesibles, noticias, deportes, tutoriales dactilológicos y recursos 100% inclusivos con subtítulos.">
+    <meta name="robots" content="index, follow">
+    <title>InfoSordos · Comunicación sin barreras | LSE y Accesibilidad Auditiva</title>
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://info-sordos.vercel.app/">
+    <meta property="og:title" content="InfoSordos · Comunicación sin barreras | LSE">
+    <meta property="og:description" content="Aprende Lengua de Signos Española (LSE) con InfoSordos. Recursos 100% accesibles con subtítulos para toda la comunidad sorda.">
+    <meta property="og:image" content="https://info-sordos.vercel.app/src/assets/images/1.webp">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://info-sordos.vercel.app/">
+    <meta property="twitter:title" content="InfoSordos · Comunicación sin barreras | LSE">
+    <meta property="twitter:description" content="Aprende Lengua de Signos Española (LSE) con InfoSordos. Recursos 100% accesibles con subtítulos para toda la comunidad sorda.">
+    <meta property="twitter:image" content="https://info-sordos.vercel.app/src/assets/images/1.webp">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://info-sordos.vercel.app/">
+
+    <!-- Styles & Scripts -->
+    <link rel="stylesheet" href="/src/styles/main.css">
+    <script type="module" src="/src/js/main.js" defer></script>
+
+    <!-- Preload critical Hero Image for LCP optimization -->
+    <link rel="preload" as="image" href="/src/assets/images/1.webp" type="image/webp">
+
+    <!-- Schema Markup JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://info-sordos.vercel.app/#organization",
+          "name": "InfoSordos",
+          "url": "https://info-sordos.vercel.app/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://info-sordos.vercel.app/src/assets/images/1.webp"
+          },
+          "sameAs": [
+            "https://youtube.com/infosordos",
+            "https://facebook.com/infosordos",
+            "https://instagram.com/infosordos"
+          ]
+        },
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://info-sordos.vercel.app/#localbusiness",
+          "name": "InfoSordos",
+          "image": "https://info-sordos.vercel.app/src/assets/images/1.webp",
+          "url": "https://info-sordos.vercel.app/",
+          "telephone": "+34900000000",
+          "priceRange": "$$",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "España",
+            "addressLocality": "Madrid",
+            "addressRegion": "Madrid",
+            "postalCode": "28001",
+            "addressCountry": "ES"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://info-sordos.vercel.app/#website",
+          "url": "https://info-sordos.vercel.app/",
+          "name": "InfoSordos",
+          "publisher": {
+            "@id": "https://info-sordos.vercel.app/#organization"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://info-sordos.vercel.app/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "¿Qué es InfoSordos?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "InfoSordos es una plataforma digital dedicada a proporcionar recursos de comunicación, noticias de actualidad, deportes y tutoriales de aprendizaje adaptados y 100% accesibles en Lengua de Signos Española (LSE) con subtítulos."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Quién puede aprender LSE en InfoSordos?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Cualquier persona interesada: familiares de personas sordas, profesionales de la educación, estudiantes de interpretación de LSE, o cualquier persona que quiera aprender una lengua inclusiva y sin barreras."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Los contenidos de InfoSordos son gratuitos?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sí, todos nuestros vídeo-tutoriales y recursos publicados en la web y en nuestro canal oficial de YouTube son completamente gratuitos y de libre acceso."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- Header Injection -->
+    <load src="src/partials/header.html" />
+
+    <main class="flex-1">
+        <!-- Hero Section -->
+        <section class="relative bg-gradient-to-br from-primary/10 via-background to-secondary/15 py-20 lg:py-32 overflow-hidden bg-grid-pattern" aria-label="Introducción a InfoSordos">
+            <div class="container-x relative z-10">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <!-- Text Content -->
+                    <div class="space-y-8 animate-fade-in-up">
+                        <div class="inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-4.5 py-2 text-xs font-semibold text-primary backdrop-blur-sm">
+                            <span class="flex h-2.5 w-2.5 rounded-full bg-primary mr-2.5 animate-pulse" aria-hidden="true"></span>
+                            Más de 5 años rompiendo barreras de comunicación
+                        </div>
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.15] text-foreground">
+                            Comunicación <span class="bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">sin barreras</span> en Lengua de Signos
+                        </h1>
+                        <p class="text-lg text-muted-foreground leading-relaxed max-w-xl">
+                            Aprende, comparte y conecta a través de la Lengua de Signos Española (LSE). Disfruta de videotutoriales y contenidos de actualidad 100% accesibles y con subtítulos para toda la comunidad sorda y oyente.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4.5">
+                            <a href="tutorials.html" class="inline-flex items-center justify-center rounded-xl bg-primary px-8 py-4.5 text-base font-bold text-primary-foreground shadow-lg transition-all duration-300 hover:bg-primary/95 hover:shadow-xl hover:scale-[1.02] focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mr-2" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+                                Explorar Tutoriales
+                            </a>
+                            <a href="https://youtube.com/infosordos" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-xl border border-border bg-card px-8 py-4.5 text-base font-bold text-foreground transition-all duration-300 hover:bg-muted/50 hover:scale-[1.02] focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2" aria-label="Ver canal de YouTube de InfoSordos (se abre en nueva ventana)">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="mr-2.5 text-red-600" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                                Canal de YouTube
+                            </a>
+                        </div>
+                        <!-- Social Proof / Suscriptores -->
+                        <div class="flex items-center gap-5 pt-4">
+                            <div class="flex -space-x-3.5" aria-hidden="true">
+                                <img class="w-11 h-11 rounded-full border-2 border-card object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=80&h=80&fit=crop" alt="" loading="lazy">
+                                <img class="w-11 h-11 rounded-full border-2 border-card object-cover" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=80&h=80&fit=crop" alt="" loading="lazy">
+                                <img class="w-11 h-11 rounded-full border-2 border-card object-cover" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop" alt="" loading="lazy">
+                            </div>
+                            <div class="text-sm font-medium">
+                                <p class="text-foreground"><span class="font-bold text-primary">24.4K+</span> suscriptores</p>
+                                <p class="text-muted-foreground text-xs">Formando parte de una comunidad inclusiva</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Visual/Image Content -->
+                    <div class="relative w-full max-w-lg mx-auto lg:max-w-none animate-fade-in">
+                        <!-- Premium Background Blur Elements -->
+                        <div class="absolute -top-12 -left-12 w-64 h-64 bg-primary/20 rounded-full blur-3xl -z-10" aria-hidden="true"></div>
+                        <div class="absolute -bottom-12 -right-12 w-64 h-64 bg-secondary/30 rounded-full blur-3xl -z-10" aria-hidden="true"></div>
+                        
+                        <!-- Main Picture Frame -->
+                        <div class="relative rounded-2xl overflow-hidden border border-border shadow-2xl bg-card transition-transform duration-500 hover:scale-[1.01]">
+                            <picture>
+                                <source srcset="/src/assets/images/1.avif" type="image/avif">
+                                <source srcset="/src/assets/images/1.webp" type="image/webp">
+                                <img src="/src/assets/images/1.webp" alt="Miembro del equipo de InfoSordos comunicándose fluidamente mediante lengua de signos española con fondo profesional" class="w-full h-auto object-cover max-h-[460px]">
+                            </picture>
+                        </div>
+
+                        <!-- Sticky overlay badge -->
+                        <div class="absolute -bottom-6 -left-6 bg-card border border-border rounded-2xl p-5 shadow-xl animate-float max-w-[220px]">
+                            <div class="flex items-center gap-3.5">
+                                <div class="w-12 h-12 rounded-xl bg-success/15 flex items-center justify-center flex-shrink-0 text-success">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-sm text-foreground">Accesible 100%</p>
+                                    <p class="text-xs text-muted-foreground">Vídeos en LSE con subtítulos claros</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="py-16 bg-card border-y border-border" aria-label="Estadísticas de impacto">
+            <div class="container-x">
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+                    <div class="text-center">
+                        <p class="text-4xl sm:text-5xl font-extrabold text-primary font-heading tracking-tight" data-counter-target="5+">0</p>
+                        <p class="text-sm font-semibold text-muted-foreground mt-2 uppercase tracking-wide text-xs">Años de Trayectoria</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-4xl sm:text-5xl font-extrabold text-primary font-heading tracking-tight" data-counter-target="24.4K">0</p>
+                        <p class="text-sm font-semibold text-muted-foreground mt-2 uppercase tracking-wide text-xs">Miembros en YouTube</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-4xl sm:text-5xl font-extrabold text-primary font-heading tracking-tight" data-counter-target="500+">0</p>
+                        <p class="text-sm font-semibold text-muted-foreground mt-2 uppercase tracking-wide text-xs">Vídeos Educativos</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-4xl sm:text-5xl font-extrabold text-primary font-heading tracking-tight" data-counter-target="100%">0</p>
+                        <p class="text-sm font-semibold text-muted-foreground mt-2 uppercase tracking-wide text-xs">Diseño Inclusivo</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Preview Section -->
+        <section class="py-20 lg:py-28 bg-background" aria-labelledby="services-title">
+            <div class="container-x">
+                <div class="max-w-3xl mx-auto text-center mb-16 space-y-4">
+                    <h2 id="services-title" class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground leading-tight">
+                        ¿Qué contenidos compartimos?
+                    </h2>
+                    <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+                        Ofrecemos recursos de información adaptados, noticias actuales y formación para integrar a toda la comunidad sorda.
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Card 1: Actualidad -->
+                    <a href="blog.html?category=actualidad" class="group bg-card rounded-2xl border border-border overflow-hidden shadow-sm premium-shadow-hover block focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none">
+                        <div class="relative overflow-hidden aspect-[4/3] bg-muted">
+                            <img src="https://images.unsplash.com/photo-1504711434969-e33886168f7c?w=600&h=450&fit=crop" alt="Persona leyendo periódico en tablet" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-t from-foreground/80 via-transparent to-transparent"></div>
+                            <div class="absolute bottom-5 left-5">
+                                <div class="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-primary text-primary-foreground shadow-md">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6.5 space-y-3">
+                            <h3 class="text-xl font-bold font-heading text-foreground group-hover:text-primary transition-colors">Noticias y Actualidad</h3>
+                            <p class="text-muted-foreground text-sm leading-relaxed">
+                                Sigue la actualidad nacional e internacional adaptada en Lengua de Signos Española.
+                            </p>
+                            <div class="inline-flex items-center text-sm font-bold text-primary pt-2 group-hover:underline">
+                                Explorar categoría
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="ml-2 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Card 2: Deportes -->
+                    <a href="blog.html?category=deportes" class="group bg-card rounded-2xl border border-border overflow-hidden shadow-sm premium-shadow-hover block focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none">
+                        <div class="relative overflow-hidden aspect-[4/3] bg-muted">
+                            <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=600&h=450&fit=crop" alt="Atletas corriendo en pista de atletismo" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-t from-foreground/80 via-transparent to-transparent"></div>
+                            <div class="absolute bottom-5 left-5">
+                                <div class="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-secondary text-secondary-foreground shadow-md">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17"/><path d="M14 14.66V17"/><path d="M18 22H4v-3a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3Z"/><path d="M8.5 11.5 12 3l3.5 8.5"/><path d="M12 3v11"/></svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6.5 space-y-3">
+                            <h3 class="text-xl font-bold font-heading text-foreground group-hover:text-primary transition-colors">Deportes en LSE</h3>
+                            <p class="text-muted-foreground text-sm leading-relaxed">
+                                Las hazañas deportivas explicadas con toda la expresividad de la lengua de signos.
+                            </p>
+                            <div class="inline-flex items-center text-sm font-bold text-primary pt-2 group-hover:underline">
+                                Explorar categoría
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="ml-2 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Card 3: Tutoriales -->
+                    <a href="tutorials.html" class="group bg-card rounded-2xl border border-border overflow-hidden shadow-sm premium-shadow-hover block focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none">
+                        <div class="relative overflow-hidden aspect-[4/3] bg-muted">
+                            <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?w=600&h=450&fit=crop" alt="Libro abierto y libreta de notas" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-t from-foreground/80 via-transparent to-transparent"></div>
+                            <div class="absolute bottom-5 left-5">
+                                <div class="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-success text-success-foreground shadow-md">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6.5 space-y-3">
+                            <h3 class="text-xl font-bold font-heading text-foreground group-hover:text-primary transition-colors">Video-Tutoriales LSE</h3>
+                            <p class="text-muted-foreground text-sm leading-relaxed">
+                                Formación estructurada, desde dactilología básica hasta diálogos de la vida diaria en LSE.
+                            </p>
+                            <div class="inline-flex items-center text-sm font-bold text-primary pt-2 group-hover:underline">
+                                Ver todos los cursos
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="ml-2 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="py-20 lg:py-28 bg-card border-y border-border" aria-labelledby="testimonials-title">
+            <div class="container-x">
+                <div class="max-w-3xl mx-auto text-center mb-16 space-y-4">
+                    <h2 id="testimonials-title" class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground leading-tight">
+                        La opinión de nuestra comunidad
+                    </h2>
+                    <p class="text-lg text-muted-foreground max-w-xl mx-auto">
+                        Descubre cómo nuestros vídeos y tutoriales están ayudando a integrar y educar en lengua de signos.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Testimonial 1 -->
+                    <div class="bg-background rounded-2xl border border-border p-8 shadow-sm flex flex-col justify-between">
+                        <p class="text-muted-foreground text-sm leading-relaxed italic">
+                            "Gracias a los tutoriales dactilológicos y de saludos pude iniciarme desde cero en la lengua de signos para comunicarme con mi sobrino sordo. Los vídeos están explicados de forma súper sencilla y los subtítulos ayudan muchísimo."
+                        </p>
+                        <div class="flex items-center gap-4 mt-6">
+                            <img class="w-12 h-12 rounded-full object-cover" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop" alt="Retrato de Laura Gómez" loading="lazy">
+                            <div>
+                                <p class="font-bold text-foreground text-sm">Laura Gómez</p>
+                                <p class="text-muted-foreground text-xs font-semibold">Estudiante principiante</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="bg-background rounded-2xl border border-border p-8 shadow-sm flex flex-col justify-between">
+                        <p class="text-muted-foreground text-sm leading-relaxed italic">
+                            "Como persona sorda, me resulta difícil encontrar noticias y actualidad adaptada y con buena expresividad en LSE. InfoSordos hace un trabajo impecable compartiendo la información al instante de forma accesible. Son un referente."
+                        </p>
+                        <div class="flex items-center gap-4 mt-6">
+                            <img class="w-12 h-12 rounded-full object-cover" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop" alt="Retrato de Javier Martínez" loading="lazy">
+                            <div>
+                                <p class="font-bold text-foreground text-sm">Javier Martínez</p>
+                                <p class="text-muted-foreground text-xs font-semibold">Miembro de la Comunidad Sorda</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="bg-background rounded-2xl border border-border p-8 shadow-sm flex flex-col justify-between">
+                        <p class="text-muted-foreground text-sm leading-relaxed italic">
+                            "Estudiaba interpretación de LSE y el material deportivo y de cocina de esta web me sirvió enormemente para ampliar mi vocabulario técnico de forma fluida. Se nota el compromiso y la calidad técnica detrás de cada vídeo."
+                        </p>
+                        <div class="flex items-center gap-4 mt-6">
+                            <img class="w-12 h-12 rounded-full object-cover" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop" alt="Retrato de Sofía Ruiz" loading="lazy">
+                            <div>
+                                <p class="font-bold text-foreground text-sm">Sofía Ruiz</p>
+                                <p class="text-muted-foreground text-xs font-semibold">Intérprete de Lengua de Signos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section (Accessible details accordion) -->
+        <section class="py-20 lg:py-28 bg-background" aria-labelledby="faq-title">
+            <div class="container-x max-w-4xl">
+                <div class="text-center mb-16 space-y-4">
+                    <h2 id="faq-title" class="text-3xl sm:text-4xl font-extrabold text-foreground">Preguntas Frecuentes</h2>
+                    <p class="text-lg text-muted-foreground">Resolvemos tus dudas principales sobre nuestro portal accesible.</p>
+                </div>
+
+                <div class="space-y-4">
+                    <!-- FAQ 1 -->
+                    <details class="group bg-card border border-border rounded-xl transition-all duration-300 [&_summary::-webkit-details-marker]:hidden" open>
+                        <summary class="flex items-center justify-between p-6 font-bold text-foreground cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-xl select-none">
+                            <span class="text-base sm:text-lg">¿Qué es InfoSordos?</span>
+                            <span class="ml-4 flex h-7 w-7 items-center justify-center rounded-lg bg-primary/10 text-primary group-open:rotate-180 transition-transform duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+                            </span>
+                        </summary>
+                        <div class="px-6 pb-6 pt-0 border-t border-border/40 text-muted-foreground text-sm sm:text-base leading-relaxed animate-fade-in">
+                            <p>
+                                InfoSordos es una plataforma digital de comunicación inclusiva. Nuestro objetivo es derribar las barreras de comunicación para las personas sordas y con discapacidad auditiva en España, ofreciéndoles vídeos explicados directamente en LSE con subtítulos claros y redacción directa.
+                            </p>
+                        </div>
+                    </details>
+
+                    <!-- FAQ 2 -->
+                    <details class="group bg-card border border-border rounded-xl transition-all duration-300 [&_summary::-webkit-details-marker]:hidden">
+                        <summary class="flex items-center justify-between p-6 font-bold text-foreground cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-xl select-none">
+                            <span class="text-base sm:text-lg">¿Quién puede aprender LSE con sus tutoriales?</span>
+                            <span class="ml-4 flex h-7 w-7 items-center justify-center rounded-lg bg-primary/10 text-primary group-open:rotate-180 transition-transform duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+                            </span>
+                        </summary>
+                        <div class="px-6 pb-6 pt-0 border-t border-border/40 text-muted-foreground text-sm sm:text-base leading-relaxed animate-fade-in">
+                            <p>
+                                ¡Cualquier persona! No se requieren conocimientos previos. Nuestros video-tutoriales básicos abarcan desde dactilología elemental (alfabeto), números y saludos iniciales, ideales para oyentes que desean romper barreras o personas sordas que quieran repasar LSE.
+                            </p>
+                        </div>
+                    </details>
+
+                    <!-- FAQ 3 -->
+                    <details class="group bg-card border border-border rounded-xl transition-all duration-300 [&_summary::-webkit-details-marker]:hidden">
+                        <summary class="flex items-center justify-between p-6 font-bold text-foreground cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-xl select-none">
+                            <span class="text-base sm:text-lg">¿Los contenidos son de acceso gratuito?</span>
+                            <span class="ml-4 flex h-7 w-7 items-center justify-center rounded-lg bg-primary/10 text-primary group-open:rotate-180 transition-transform duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+                            </span>
+                        </summary>
+                        <div class="px-6 pb-6 pt-0 border-t border-border/40 text-muted-foreground text-sm sm:text-base leading-relaxed animate-fade-in">
+                            <p>
+                                Sí. Todos los tutoriales, noticias y vídeos publicados en InfoSordos y en nuestro canal de YouTube oficial son completamente gratuitos. Creemos en el libre acceso a la información y en la difusión abierta de la Lengua de Signos Española.
+                            </p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 lg:py-28 bg-muted/40" aria-label="Llamada a la acción">
+            <div class="container-x">
+                <div class="rounded-3xl bg-gradient-to-br from-primary to-blue-700 p-10 lg:p-20 text-center text-primary-foreground relative overflow-hidden shadow-2xl">
+                    <!-- Overlay Grid Graphic -->
+                    <div class="absolute inset-0 bg-grid-pattern opacity-10" aria-hidden="true"></div>
+                    <div class="absolute -top-12 -left-12 w-64 h-64 bg-white/10 rounded-full blur-3xl" aria-hidden="true"></div>
+
+                    <div class="max-w-2xl mx-auto space-y-8 relative z-10 animate-fade-in-up">
+                        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-heading leading-tight text-white">
+                            ¿Quieres dominar la lengua de signos?
+                        </h2>
+                        <p class="text-lg text-primary-foreground/90 leading-relaxed">
+                            Accede a nuestro programa completo de tutoriales en vídeo o contacta con nosotros si necesitas soporte de accesibilidad personalizada.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4.5 justify-center">
+                            <a href="tutorials.html" class="inline-flex items-center justify-center rounded-xl bg-secondary px-8 py-4 text-base font-bold text-secondary-foreground shadow-lg transition-all duration-300 hover:bg-secondary/95 hover:shadow-xl hover:scale-[1.02]">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mr-2" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+                                Empezar a Aprender
+                            </a>
+                            <a href="contact.html" class="inline-flex items-center justify-center rounded-xl border border-white/20 bg-white/10 px-8 py-4 text-base font-bold text-white transition-all duration-300 hover:bg-white/20 hover:scale-[1.02]">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2.5" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                Contactar Ahora
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Injection -->
+    <load src="src/partials/footer.html" />
+
+</body>
+</html>

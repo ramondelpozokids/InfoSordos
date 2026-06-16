@@ -1,0 +1,48 @@
+https://info-sordos.vercel.app/
+
+WordPress
+twentytwentyfour
+WordPress.com
+        |
+        |
+Gutenberg Editor
+        |
+        |
+Twenty Twenty-Four Theme
+        |
+        |
+Jetpack
+
+Diagnostica problemas de rendimiento Móvil
+83
+Rendimiento
+98
+Accesibilidad
+96
+Prácticas recomendadas
+100
+SEO
+
+
+Diagnostica problemas de rendimiento Ordenador
+99
+Rendimiento
+98
+Accesibilidad
+96
+Prácticas recomendadas
+100
+SEO
+
+
+
+Diagnostica problemas de rendimiento Móvil
+
+45
+Rendimiento
+95
+Accesibilidad
+73
+Prácticas recomendadas
+100
+SEO

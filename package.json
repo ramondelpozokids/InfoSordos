@@ -1,0 +1,30 @@
+{
+  "name": "infosordos",
+  "version": "1.0.0",
+  "description": "InfoSordos - Comunicación sin barreras. Web premium optimizada.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "lse",
+    "lengua de signos española",
+    "accesibilidad",
+    "personas sordas"
+  ],
+  "author": "InfoSordos",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.4",
+    "vite": "^5.2.11",
+    "vite-plugin-html-inject": "^1.1.2"
+  },
+  "dependencies": {
+    "@fontsource/inter": "^5.0.18",
+    "@fontsource/plus-jakarta-sans": "^5.0.19"
+  }
+}

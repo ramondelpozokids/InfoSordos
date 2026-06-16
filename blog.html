@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0a3bf6">
+    <meta name="description" content="Lee y visualiza las últimas noticias, eventos deportivos, recetas y cultura adaptadas al 100% en Lengua de Signos Española (LSE) con subtítulos.">
+    <meta name="robots" content="index, follow">
+    <title>Blog y Vídeos LSE · InfoSordos | Actualidad y Cultura Inclusiva</title>
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://info-sordos.vercel.app/blog.html">
+    <meta property="og:title" content="Blog y Vídeos LSE · InfoSordos">
+    <meta property="og:description" content="Noticias, deportes, cultura y curiosidades adaptadas en Lengua de Signos Española.">
+    <meta property="og:image" content="https://info-sordos.vercel.app/src/assets/images/1.webp">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://info-sordos.vercel.app/blog.html">
+    <meta property="twitter:title" content="Blog y Vídeos LSE · InfoSordos">
+    <meta property="twitter:description" content="Noticias, deportes, cultura y curiosidades adaptadas en Lengua de Signos Española.">
+    <meta property="twitter:image" content="https://info-sordos.vercel.app/src/assets/images/1.webp">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://info-sordos.vercel.app/blog.html">
+
+    <!-- Styles & Scripts -->
+    <link rel="stylesheet" href="/src/styles/main.css">
+    <script type="module" src="/src/js/main.js" defer></script>
+
+    <!-- Schema Markup JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Blog",
+          "@id": "https://info-sordos.vercel.app/blog.html#blog",
+          "url": "https://info-sordos.vercel.app/blog.html",
+          "name": "Blog de InfoSordos",
+          "description": "Noticias, deportes, cultura y curiosidades adaptadas en Lengua de Signos Española (LSE)."
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://info-sordos.vercel.app/blog.html#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Inicio",
+              "item": "https://info-sordos.vercel.app/index.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog y Vídeos",
+              "item": "https://info-sordos.vercel.app/blog.html"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- Header Injection -->
+    <load src="src/partials/header.html" />
+
+    <main class="flex-1">
+        <!-- Breadcrumbs -->
+        <div class="bg-card border-b border-border/40 py-4" aria-label="Breadcrumb">
+            <div class="container-x">
+                <ol class="flex items-center space-x-2 text-xs font-semibold text-muted-foreground" role="list">
+                    <li>
+                        <a href="index.html" class="hover:text-primary transition-colors">Inicio</a>
+                    </li>
+                    <li class="flex items-center space-x-2" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="text-muted-foreground/50"><path d="m9 18 6-6-6-6"/></svg>
+                        <span class="select-none">Blog y Vídeos</span>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- Hero Section -->
+        <section class="relative bg-muted/30 py-20 lg:py-24 overflow-hidden border-b border-border/40" aria-labelledby="blog-hero-title">
+            <div class="container-x relative z-10 text-center max-w-3xl mx-auto space-y-6">
+                <h1 id="blog-hero-title" class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-foreground tracking-tight animate-fade-in-up">
+                    Blog y Vídeos LSE
+                </h1>
+                <p class="text-lg sm:text-xl text-muted-foreground leading-relaxed animate-fade-in">
+                    Mantente informado de toda la actualidad, actividades de ocio, deportes y novedades culturales de la comunidad sorda explicadas de forma visual y accesible.
+                </p>
+            </div>
+        </section>
+
+        <!-- Blog Dashboard Section -->
+        <section class="py-16 lg:py-24 bg-background" aria-label="Noticias y artículos">
+            <div class="container-x">
+                
+                <!-- Category Filter Buttons -->
+                <div class="flex flex-wrap justify-center gap-3 mb-16">
+                    <button class="px-5 py-2.5 rounded-xl border border-border text-sm font-semibold transition-all duration-300 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none" data-blog-filter="all">Todos</button>
+                    <button class="px-5 py-2.5 rounded-xl border border-border text-sm font-semibold transition-all duration-300 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none" data-blog-filter="actualidad">Actualidad</button>
+                    <button class="px-5 py-2.5 rounded-xl border border-border text-sm font-semibold transition-all duration-300 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none" data-blog-filter="deportes">Deportes</button>
+                    <button class="px-5 py-2.5 rounded-xl border border-border text-sm font-semibold transition-all duration-300 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none" data-blog-filter="cultura">Cultura</button>
+                    <button class="px-5 py-2.5 rounded-xl border border-border text-sm font-semibold transition-all duration-300 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none" data-blog-filter="viajes">Viajes</button>
+                    <button class="px-5 py-2.5 rounded-xl border border-border text-sm font-semibold transition-all duration-300 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none" data-blog-filter="recetas">Recetas</button>
+                </div>
+
+                <!-- Articles Grid -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Article 1: Actualidad -->
+                    <article class="bg-card rounded-2xl border border-border overflow-hidden shadow-sm flex flex-col justify-between premium-shadow-hover transition-all duration-300" data-blog-article data-blog-category="actualidad">
+                        <div>
+                            <div class="relative overflow-hidden aspect-[16/10] bg-muted">
+                                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&h=375&fit=crop" alt="Persona usando pantalla digital interactiva" class="w-full h-full object-cover" loading="lazy">
+                                <span class="absolute top-4 left-4 inline-flex items-center rounded-full bg-primary px-3 py-1 text-xs font-bold text-primary-foreground shadow-sm">Actualidad</span>
+                            </div>
+                            <div class="p-6 space-y-3">
+                                <p class="text-xs text-muted-foreground font-semibold">15 Jun 2026</p>
+                                <h3 class="text-xl font-bold font-heading text-foreground">Nuevas tecnologías accesibles para la comunidad sorda</h3>
+                                <p class="text-muted-foreground text-sm leading-relaxed">
+                                    Descubre las últimas innovaciones tecnológicas de subtitulado e inteligencia artificial que facilitan la inclusión de personas sordas.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <a href="#" class="inline-flex items-center text-sm font-bold text-primary hover:underline group" aria-label="Leer más sobre Nuevas tecnologías accesibles para la comunidad sorda">
+                                Leer artículo completo
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="ml-2 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Article 2: Deportes -->
+                    <article class="bg-card rounded-2xl border border-border overflow-hidden shadow-sm flex flex-col justify-between premium-shadow-hover transition-all duration-300" data-blog-article data-blog-category="deportes">
+                        <div>
+                            <div class="relative overflow-hidden aspect-[16/10] bg-muted">
+                                <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=600&h=375&fit=crop" alt="Corredores listos para iniciar" class="w-full h-full object-cover" loading="lazy">
+                                <span class="absolute top-4 left-4 inline-flex items-center rounded-full bg-primary px-3 py-1 text-xs font-bold text-primary-foreground shadow-sm">Deportes</span>
+                            </div>
+                            <div class="p-6 space-y-3">
+                                <p class="text-xs text-muted-foreground font-semibold">12 Jun 2026</p>
+                                <h3 class="text-xl font-bold font-heading text-foreground">Resumen deportivo semanal: Hitos del deporte adaptado</h3>
+                                <p class="text-muted-foreground text-sm leading-relaxed">
+                                    Repasamos todos los eventos, resultados de competiciones y novedades del deporte nacional e internacional en LSE.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <a href="#" class="inline-flex items-center text-sm font-bold text-primary hover:underline group" aria-label="Leer más sobre Resumen deportivo semanal">
+                                Leer artículo completo
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="ml-2 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Article 3: Cultura -->
+                    <article class="bg-card rounded-2xl border border-border overflow-hidden shadow-sm flex flex-col justify-between premium-shadow-hover transition-all duration-300" data-blog-article data-blog-category="cultura">
+                        <div>
+                            <div class="relative overflow-hidden aspect-[16/10] bg-muted">
+                                <img src="https://images.unsplash.com/photo-1514539079130-25950c84af65?w=600&h=375&fit=crop" alt="Exposición de museo con cuadros colgados" class="w-full h-full object-cover" loading="lazy">
+                                <span class="absolute top-4 left-4 inline-flex items-center rounded-full bg-primary px-3 py-1 text-xs font-bold text-primary-foreground shadow-sm">Cultura</span>
+                            </div>
+                            <div class="p-6 space-y-3">
+                                <p class="text-xs text-muted-foreground font-semibold">08 Jun 2026</p>
+                                <h3 class="text-xl font-bold font-heading text-foreground">Exposiciones de arte accesibles en los principales museos</h3>
+                                <p class="text-muted-foreground text-sm leading-relaxed">
+                                    Guía de centros culturales en España que ofrecen vídeo-guías en lengua de signos y adaptaciones de relieve táctil.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <a href="#" class="inline-flex items-center text-sm font-bold text-primary hover:underline group" aria-label="Leer más sobre Exposiciones de arte accesibles">
+                                Leer artículo completo
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="ml-2 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Article 4: Viajes -->
+                    <article class="bg-card rounded-2xl border border-border overflow-hidden shadow-sm flex flex-col justify-between premium-shadow-hover transition-all duration-300" data-blog-article data-blog-category="viajes">
+                        <div>
+                            <div class="relative overflow-hidden aspect-[16/10] bg-muted">
+                                <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=600&h=375&fit=crop" alt="Coche viajando por carretera desértica" class="w-full h-full object-cover" loading="lazy">
+                                <span class="absolute top-4 left-4 inline-flex items-center rounded-full bg-primary px-3 py-1 text-xs font-bold text-primary-foreground shadow-sm">Viajes</span>
+                            </div>
+                            <div class="p-6 space-y-3">
+                                <p class="text-xs text-muted-foreground font-semibold">03 Jun 2026</p>
+                                <h3 class="text-xl font-bold font-heading text-foreground">Destinos accesibles recomendados para el turismo de verano</h3>
+                                <p class="text-muted-foreground text-sm leading-relaxed">
+                                    Playas, albergues y rutas de senderismo en España que incorporan atención telefónica accesible y señalética visual completa.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <a href="#" class="inline-flex items-center text-sm font-bold text-primary hover:underline group" aria-label="Leer más sobre Destinos accesibles en verano">
+                                Leer artículo completo
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="ml-2 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Article 5: Recetas -->
+                    <article class="bg-card rounded-2xl border border-border overflow-hidden shadow-sm flex flex-col justify-between premium-shadow-hover transition-all duration-300" data-blog-article data-blog-category="recetas">
+                        <div>
+                            <div class="relative overflow-hidden aspect-[16/10] bg-muted">
+                                <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=600&h=375&fit=crop" alt="Preparación culinaria en cocina" class="w-full h-full object-cover" loading="lazy">
+                                <span class="absolute top-4 left-4 inline-flex items-center rounded-full bg-primary px-3 py-1 text-xs font-bold text-primary-foreground shadow-sm">Recetas</span>
+                            </div>
+                            <div class="p-6 space-y-3">
+                                <p class="text-xs text-muted-foreground font-semibold">28 May 2026</p>
+                                <h3 class="text-xl font-bold font-heading text-foreground">Cocinando en LSE: Cómo elaborar una Tortilla de Patatas</h3>
+                                <p class="text-muted-foreground text-sm leading-relaxed">
+                                    Receta paso a paso explicada íntegramente en lengua de signos, detallando medidas, técnicas de fritura y vocabulario culinario.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <a href="#" class="inline-flex items-center text-sm font-bold text-primary hover:underline group" aria-label="Leer más sobre Receta de Tortilla de Patatas en LSE">
+                                Leer artículo completo
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="ml-2 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Article 6: Cultura -->
+                    <article class="bg-card rounded-2xl border border-border overflow-hidden shadow-sm flex flex-col justify-between premium-shadow-hover transition-all duration-300" data-blog-article data-blog-category="cultura">
+                        <div>
+                            <div class="relative overflow-hidden aspect-[16/10] bg-muted">
+                                <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600&h=375&fit=crop" alt="Libro abierto de historia con gafas" class="w-full h-full object-cover" loading="lazy">
+                                <span class="absolute top-4 left-4 inline-flex items-center rounded-full bg-primary px-3 py-1 text-xs font-bold text-primary-foreground shadow-sm">Cultura</span>
+                            </div>
+                            <div class="p-6 space-y-3">
+                                <p class="text-xs text-muted-foreground font-semibold">22 May 2026</p>
+                                <h3 class="text-xl font-bold font-heading text-foreground">Historia y Reconocimiento Legal de la LSE en España</h3>
+                                <p class="text-muted-foreground text-sm leading-relaxed">
+                                    Analizamos los hitos del reconocimiento legislativo de las lenguas de signos españolas y la protección de su patrimonio lingüístico.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <a href="#" class="inline-flex items-center text-sm font-bold text-primary hover:underline group" aria-label="Leer más sobre Historia y Reconocimiento de la LSE">
+                                Leer artículo completo
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="ml-2 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter CTA -->
+        <section class="py-20 lg:py-24 bg-card border-t border-border" aria-label="Boletín de novedades">
+            <div class="container-x max-w-4xl text-center space-y-8 animate-fade-in-up">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-foreground">¿Quieres recibir las noticias y vídeos directamente?</h2>
+                <p class="text-lg text-muted-foreground leading-relaxed">
+                    Suscríbete a nuestro boletín periódico de novedades accesibles. Te enviaremos un correo cada vez que publiquemos un vídeo o artículo temático nuevo.
+                </p>
+                
+                <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto" aria-label="Suscripción a la newsletter">
+                    <div class="flex-grow">
+                        <label for="newsletter-email" class="sr-only">Correo electrónico</label>
+                        <input id="newsletter-email" type="email" placeholder="Introduce tu email" required class="w-full px-5 py-4.5 rounded-xl border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm text-foreground">
+                    </div>
+                    <button type="submit" class="inline-flex items-center justify-center rounded-xl bg-primary px-8 py-4.5 text-sm font-bold text-primary-foreground shadow-md transition-all duration-300 hover:bg-primary/95 hover:scale-[1.02]">
+                        Suscribirse
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Injection -->
+    <load src="src/partials/footer.html" />
+
+</body>
+</html>
