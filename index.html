@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="InfoSordos - Comunicación sin barreras. Aprende, comparte y conecta a través de la Lengua de Signos Española. Vídeos accesibles en LSE con subtítulos.">
+    <meta name="robots" content="index, follow">
+    <title>InfoSordos · Comunicación sin barreras | LSE</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=Inter:wght@600&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700,800,900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        border: "hsl(var(--border))",
+                        input: "hsl(var(--input))",
+                        ring: "hsl(var(--ring))",
+                        background: "hsl(var(--background))",
+                        foreground: "hsl(var(--foreground))",
+                        primary: {
+                            DEFAULT: "hsl(var(--primary))",
+                            foreground: "hsl(var(--primary-foreground))",
+                        },
+                        secondary: {
+                            DEFAULT: "hsl(var(--secondary))",
+                            foreground: "hsl(var(--secondary-foreground))",
+                        },
+                        destructive: {
+                            DEFAULT: "hsl(var(--destructive))",
+                            foreground: "hsl(var(--destructive-foreground))",
+                        },
+                        muted: {
+                            DEFAULT: "hsl(var(--muted))",
+                            foreground: "hsl(var(--muted-foreground))",
+                        },
+                        accent: {
+                            DEFAULT: "hsl(var(--accent))",
+                            foreground: "hsl(var(--accent-foreground))",
+                        },
+                    },
+                    fontFamily: {
+                        sans: ['"IBM Plex Sans"', 'system-ui', 'sans-serif'],
+                        heading: ['"Cabinet Grotesk"', '"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+                    },
+                    borderRadius: {
+                        lg: "var(--radius)",
+                        md: "calc(var(--radius) - 2px)",
+                        sm: "calc(var(--radius) - 4px)",
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        :root {
+            --background: 0 0% 98%;
+            --foreground: 0 0% 7%;
+            --card: 0 0% 100%;
+            --card-foreground: 0 0% 7%;
+            --popover: 0 0% 100%;
+            --popover-foreground: 0 0% 7%;
+            --primary: 222 100% 46%;
+            --primary-foreground: 0 0% 100%;
+            --secondary: 44 100% 51%;
+            --secondary-foreground: 0 0% 7%;
+            --muted: 220 14% 96%;
+            --muted-foreground: 220 9% 30%;
+            --accent: 226 100% 94%;
+            --accent-foreground: 222 100% 40%;
+            --destructive: 4 74% 49%;
+            --destructive-foreground: 0 0% 100%;
+            --success: 148 79% 28%;
+            --border: 220 13% 91%;
+            --input: 220 13% 91%;
+            --ring: 222 100% 46%;
+            --radius: 0.875rem;
+        }
+        
+        * { border-color: hsl(var(--border)); }
+        body {
+            background-color: hsl(var(--background));
+            font-family: "IBM Plex Sans", system-ui, sans-serif;
+            color: hsl(var(--foreground));
+            -webkit-font-smoothing: antialiased;
+        }
+        h1, h2, h3, h4, h5 {
+            font-family: "Cabinet Grotesk", "Plus Jakarta Sans", system-ui, sans-serif;
+            letter-spacing: -0.025em;
+        }
+        *:focus-visible {
+            outline: 3px solid hsl(var(--primary));
+            outline-offset: 3px;
+            border-radius: 6px;
+        }
+        .container-x {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 80rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        @media (min-width: 640px) { .container-x { padding-left: 1.5rem; padding-right: 1.5rem; } }
+        @media (min-width: 1024px) { .container-x { padding-left: 2rem; padding-right: 2rem; } }
+        
+        .grain {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(222 80% 55%) 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+        <div class="container-x flex h-20 items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 font-heading font-bold text-3xl text-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="22"/></svg>
+                InfoSordos
+            </a>
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-muted-foreground">
+                <a href="index.html" class="transition-colors hover:text-foreground">Inicio</a>
+                <a href="about.html" class="transition-colors hover:text-foreground">Nosotros</a>
+                <a href="services.html" class="transition-colors hover:text-foreground">Servicios</a>
+                <a href="tutorials.html" class="transition-colors hover:text-foreground">Tutoriales LSE</a>
+                <a href="blog.html" class="transition-colors hover:text-foreground">Blog</a>
+                <a href="contact.html" class="transition-colors hover:text-foreground">Contacto</a>
+            </nav>
+            <div class="hidden lg:flex items-center gap-4">
+                <a href="contact.html" class="inline-flex items-center justify-center rounded-md bg-primary px-6 py-2.5 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring">
+                    Contactar
+                </a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="lg:hidden p-2 text-foreground" aria-label="Abrir menú">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden border-t border-border bg-background p-4">
+            <nav class="flex flex-col gap-4 text-sm font-medium">
+                <a href="index.html" class="text-foreground">Inicio</a>
+                <a href="about.html" class="text-foreground">Nosotros</a>
+                <a href="services.html" class="text-foreground">Servicios</a>
+                <a href="tutorials.html" class="text-foreground">Tutoriales LSE</a>
+                <a href="blog.html" class="text-foreground">Blog</a>
+                <a href="contact.html" class="text-foreground">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-1">
+        <!-- Hero Section -->
+        <section class="relative hero-gradient text-white overflow-hidden">
+            <div class="absolute inset-0 -z-10 grain opacity-30"></div>
+            <div class="container-x py-24 sm:py-32 lg:py-40">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-8 animate-fade-in">
+                        <div class="inline-flex items-center rounded-full border border-white/30 bg-white/10 px-4 py-1.5 text-sm font-medium backdrop-blur-sm">
+                            <span class="flex h-2 w-2 rounded-full bg-white mr-2 animate-pulse"></span>
+                            Más de 5 años comunicando sin barreras
+                        </div>
+                        <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.1]">
+                            Comunicación <span class="text-secondary">sin barreras</span>
+                        </h1>
+                        <p class="text-xl text-white/90 leading-relaxed max-w-2xl">
+                            Aprende, comparte y conecta a través de la Lengua de Signos Española. 
+                            Vídeos accesibles en LSE con subtítulos para toda la comunidad.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="tutorials.html" class="inline-flex items-center justify-center rounded-md bg-secondary px-8 py-4 text-base font-semibold text-secondary-foreground shadow-lg transition-all hover:bg-secondary/90 hover:shadow-xl hover:-translate-y-0.5">
+                                Explorar Tutoriales
+                            </a>
+                            <a href="https://youtube.com/infosordos" target="_blank" class="inline-flex items-center justify-center rounded-md border-2 border-white/40 bg-white/10 backdrop-blur-sm px-8 py-4 text-base font-semibold text-white transition-all hover:bg-white/20">
+                                Ver Canal YouTube
+                            </a>
+                        </div>
+                        <div class="flex items-center gap-6 pt-4">
+                            <div class="flex -space-x-3">
+                                <img class="w-12 h-12 rounded-full border-2 border-white" src="https://i.ytimg.com/vi/placeholder1/maxresdefault.jpg" alt="Video thumbnail">
+                                <img class="w-12 h-12 rounded-full border-2 border-white" src="https://i.ytimg.com/vi/placeholder2/maxresdefault.jpg" alt="Video thumbnail">
+                                <img class="w-12 h-12 rounded-full border-2 border-white" src="https://i.ytimg.com/vi/placeholder3/maxresdefault.jpg" alt="Video thumbnail">
+                            </div>
+                            <div class="text-sm">
+                                <p class="font-semibold">24.4K suscriptores</p>
+                                <p class="text-white/80">Únete a nuestra comunidad</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden lg:block relative">
+                        <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+                            <img src"https://www.facebook.com/photo?fbid=553833686772227&set=pb.100064368022303.-2207520000" alt="Professional team member" class="w-full h-auto">
+                        </div>
+                        <div class="absolute -bottom-6 -left-6 bg-white rounded-xl p-6 shadow-xl">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-foreground">100% Accesible</p>
+                                    <p class="text-sm text-muted-foreground">Contenido en LSE</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="py-16 bg-muted/50 border-y border-border">
+            <div class="container-x">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <p class="text-4xl font-bold text-primary font-heading">5+</p>
+                        <p class="text-muted-foreground mt-1">Años de experiencia</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-4xl font-bold text-primary font-heading">24.4K</p>
+                        <p class="text-muted-foreground mt-1">Suscriptores</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-4xl font-bold text-primary font-heading">500+</p>
+                        <p class="text-muted-foreground mt-1">Vídeos publicados</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-4xl font-bold text-primary font-heading">100%</p>
+                        <p class="text-muted-foreground mt-1">Contenido accesible</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Preview -->
+        <section class="py-24 bg-background">
+            <div class="container-x">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl sm:text-5xl font-bold mb-4">¿Qué ofrecemos?</h2>
+                    <p class="text-xl text-muted-foreground max-w-2xl mx-auto">
+                        Contenido diverso y accesible para toda la comunidad sorda y aprendices de LSE
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Card 1 -->
+                    <div class="group rounded-2xl border border-border bg-card p-8 shadow-sm card-hover">
+                        <div class="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 font-heading">Actualidad</h3>
+                        <p class="text-muted-foreground leading-relaxed mb-4">
+                            Mantente informado sobre las últimas noticias y eventos de interés para la comunidad sorda.
+                        </p>
+                        <a href="blog.html" class="inline-flex items-center text-primary font-medium hover:underline">
+                            Ver más
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                        </a>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="group rounded-2xl border border-border bg-card p-8 shadow-sm card-hover">
+                        <div class="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-secondary/20 text-secondary-foreground">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17"/><path d="M14 14.66V17"/><path d="M18 22H4v-3a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3Z"/><path d="M8.5 11.5 12 3l3.5 8.5"/><path d="M12 3v11"/></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 font-heading">Deportes</h3>
+                        <p class="text-muted-foreground leading-relaxed mb-4">
+                            Disfruta de contenidos deportivos explicados en LSE con toda la emoción y detalles.
+                        </p>
+                        <a href="blog.html" class="inline-flex items-center text-primary font-medium hover:underline">
+                            Ver más
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                        </a>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="group rounded-2xl border border-border bg-card p-8 shadow-sm card-hover">
+                        <div class="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-success/10 text-success">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 font-heading">Tutoriales LSE</h3>
+                        <p class="text-muted-foreground leading-relaxed mb-4">
+                            Aprende Lengua de Signos Española desde cero con nuestros tutoriales básicos y prácticos.
+                        </p>
+                        <a href="tutorials.html" class="inline-flex items-center text-primary font-medium hover:underline">
+                            Ver más
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                        </a>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="group rounded-2xl border border-border bg-card p-8 shadow-sm card-hover">
+                        <div class="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 font-heading">Cultura</h3>
+                        <p class="text-muted-foreground leading-relaxed mb-4">
+                            Explora el mundo de la cultura sorda, arte, historia y tradiciones de la comunidad.
+                        </p>
+                        <a href="blog.html" class="inline-flex items-center text-primary font-medium hover:underline">
+                            Ver más
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                        </a>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="group rounded-2xl border border-border bg-card p-8 shadow-sm card-hover">
+                        <div class="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-secondary/20 text-secondary-foreground">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 font-heading">Viajes</h3>
+                        <p class="text-muted-foreground leading-relaxed mb-4">
+                            Descubre destinos accesibles y consejos para viajar siendo persona sorda.
+                        </p>
+                        <a href="blog.html" class="inline-flex items-center text-primary font-medium hover:underline">
+                            Ver más
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                        </a>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="group rounded-2xl border border-border bg-card p-8 shadow-sm card-hover">
+                        <div class="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-success/10 text-success">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="22"/></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 font-heading">Recetas</h3>
+                        <p class="text-muted-foreground leading-relaxed mb-4">
+                            Recetas culinarias explicadas paso a paso en LSE para todos los niveles.
+                        </p>
+                        <a href="blog.html" class="inline-flex items-center text-primary font-medium hover:underline">
+                            Ver más
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-24 bg-muted/50">
+            <div class="container-x">
+                <div class="rounded-3xl bg-primary p-12 lg:p-20 text-center text-primary-foreground relative overflow-hidden">
+                    <div class="absolute inset-0 -z-10 grain opacity-20"></div>
+                    <div class="max-w-3xl mx-auto space-y-8">
+                        <h2 class="text-4xl sm:text-5xl font-bold font-heading">¿Quieres aprender LSE?</h2>
+                        <p class="text-xl text-primary-foreground/90">
+                            Suscríbete a nuestro canal y blog para recibir todo el contenido actualizado directamente en tu email
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                            <a href="tutorials.html" class="inline-flex items-center justify-center rounded-md bg-secondary px-8 py-4 text-base font-semibold text-secondary-foreground shadow-lg transition-all hover:bg-secondary/90 hover:shadow-xl">
+                                Ver Tutoriales
+                            </a>
+                            <a href="contact.html" class="inline-flex items-center justify-center rounded-md border-2 border-white/40 bg-white/10 backdrop-blur-sm px-8 py-4 text-base font-semibold transition-all hover:bg-white/20">
+                                Contactar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-border bg-foreground text-background">
+        <div class="container-x py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div class="space-y-4">
+                    <a href="index.html" class="flex items-center gap-2 font-heading font-bold text-2xl text-background">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="22"/></svg>
+                        InfoSordos
+                    </a>
+                    <p class="text-background/70 leading-relaxed">
+                        Comunicación sin barreras desde 2018. Contenido accesible en Lengua de Signos Española.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="https://facebook.com/infosordos" target="_blank" class="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-background/20 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        <a href="https://youtube.com/infosordos" target="_blank" class="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-background/20 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        </a>
+                        <a href="https://instagram.com/infosordos" target="_blank" class="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-background/20 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 text-background">Enlaces rápidos</h4>
+                    <ul class="space-y-2 text-background/70 text-sm">
+                        <li><a href="about.html" class="hover:text-background transition-colors">Sobre Nosotros</a></li>
+                        <li><a href="services.html" class="hover:text-background transition-colors">Servicios</a></li>
+                        <li><a href="tutorials.html" class="hover:text-background transition-colors">Tutoriales LSE</a></li>
+                        <li><a href="blog.html" class="hover:text-background transition-colors">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 text-background">Legal</h4>
+                    <ul class="space-y-2 text-background/70 text-sm">
+                        <li><a href="privacy.html" class="hover:text-background transition-colors">Política de Privacidad</a></li>
+                        <li><a href="terms.html" class="hover:text-background transition-colors">Términos de Uso</a></li>
+                        <li><a href="cookies.html" class="hover:text-background transition-colors">Política de Cookies</a></li>
+                        <li><a href="sitemap.html" class="hover:text-background transition-colors">Mapa del Sitio</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 text-background">Contacto</h4>
+                    <ul class="space-y-2 text-background/70 text-sm">
+                        <li>hola@infosordos.com</li>
+                        <li>YouTube: InfoSordos</li>
+                        <li>España</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-background/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-background/50">
+                <p>&copy; 2026 InfoSordos. Todos los derechos reservados.</p>
+                <p>Diseñado con ❤️ para la comunidad sorda</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
